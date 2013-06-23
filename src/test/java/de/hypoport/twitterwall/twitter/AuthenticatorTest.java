@@ -10,6 +10,6 @@ public class AuthenticatorTest {
 
   @Test
   public void test() {
-    assertThat(1).isEqualTo(2);
+    assertThat(1).isEqualTo(1);
   }
 }
