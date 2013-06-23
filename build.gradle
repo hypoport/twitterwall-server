@@ -12,3 +12,7 @@ dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '6.8.+'
     testCompile group: 'org.easytesting', name: 'fest-assert', version: '1.4+'
 }
+
+test {
+    useTestNG()
+}
