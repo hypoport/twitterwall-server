@@ -11,7 +11,7 @@ targetCompatibility = 1.7
 repositories {
     mavenCentral()
     maven {
-        url "$System.env.HOME/.m2/repository"
+        url System.getProperty("user.home") + "/.m2/repository"
     }
 }
 
