@@ -3,6 +3,10 @@ apply plugin: 'war'
 apply plugin: 'jetty'
 
 description = 'Hypoport Twitterwall Server'
+version = '0.1.0-SNAPSHOT'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
