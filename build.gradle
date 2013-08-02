@@ -8,7 +8,7 @@ version = '0.1.0-SNAPSHOT'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-springVersion = "3.1.2.RELEASE"
+project.ext.springVersion = "3.1.2.RELEASE"
 
 repositories {
     mavenCentral()
@@ -20,10 +20,10 @@ repositories {
 dependencies {
     compile group: 'org.twitter4j', name: 'twitter4j-core', version: '3.0.4+'
 
-    compile "org.springframework:spring-webmvc:$springVersion",
-            "org.springframework:spring-web:$springVersion",
-            "org.springframework:spring-core:$springVersion",
-            "org.springframework:spring-context:$springVersion"
+    compile "org.springframework:spring-webmvc:$project.ext.springVersion",
+            "org.springframework:spring-web:$project.ext.springVersion",
+            "org.springframework:spring-core:$project.ext.springVersion",
+            "org.springframework:spring-context:$project.ext.springVersion"
 
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
