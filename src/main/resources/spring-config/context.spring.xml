@@ -11,8 +11,10 @@
          http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
        ">
 
-    <context:component-scan base-package="de.hypoport.twitterwall"/>
+  <context:component-scan base-package="de.hypoport.twitterwall"/>
 
+  <mvc:annotation-driven/>
+  <mvc:default-servlet-handler/>
 
 
 </beans>

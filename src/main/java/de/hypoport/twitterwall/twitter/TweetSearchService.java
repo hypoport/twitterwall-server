@@ -1,5 +1,6 @@
 package de.hypoport.twitterwall.twitter;
 
+import org.springframework.stereotype.Component;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 import twitter4j.json.DataObjectFactory;
@@ -7,10 +8,11 @@ import twitter4j.json.DataObjectFactory;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class TweetSearchService {
 
-  private String consumerKey;
-  private String consumerSecret;
+  private static String consumerKey;
+  private static String consumerSecret;
 
   public List<String> searchTweets(String searchQuery) throws TwitterException {
     ConfigurationBuilder builder = new ConfigurationBuilder();

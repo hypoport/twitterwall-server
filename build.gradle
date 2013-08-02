@@ -20,6 +20,8 @@ repositories {
 dependencies {
     compile group: 'org.twitter4j', name: 'twitter4j-core', version: '3.0.4+'
 
+    compile group: 'javax.inject', name: 'javax.inject', version: '1'
+
     compile "org.springframework:spring-webmvc:$project.ext.springVersion",
             "org.springframework:spring-web:$project.ext.springVersion",
             "org.springframework:spring-core:$project.ext.springVersion",

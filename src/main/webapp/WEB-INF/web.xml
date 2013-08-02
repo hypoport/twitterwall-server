@@ -8,14 +8,22 @@
     Hypoport Twitterwall Server
   </description>
 
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:/spring-config/context.spring.xml</param-value>
+  </context-param>
+
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
   <servlet>
-    <servlet-name>TwitterAuthenticator</servlet-name>
-    <servlet-class>de.hypoport.twitterwall.TwitterAuthenticator</servlet-class>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
   </servlet>
-
   <servlet-mapping>
-    <servlet-name>TwitterAuthenticator</servlet-name>
-    <url-pattern>/twitterauthenticator</url-pattern>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
-
 </web-app>
