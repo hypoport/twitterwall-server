@@ -10,15 +10,15 @@ import static org.fest.assertions.Assertions.assertThat;
 
 
 @Test
-public class AuthenticatorTest {
+public class TweetSearchServiceTest {
 
-  private Authenticator authenticator;
+  private TweetSearchService tweetSearchService;
 
   @BeforeMethod
   public void setup() {
-    authenticator = new Authenticator();
-    authenticator.setConsumerKey(ladeAusEnvironmentVariablen("consumerKey"));
-    authenticator.setConsumerSecret(ladeAusEnvironmentVariablen("consumerSecret"));
+    tweetSearchService = new TweetSearchService();
+    tweetSearchService.setConsumerKey(ladeAusEnvironmentVariablen("consumerKey"));
+    tweetSearchService.setConsumerSecret(ladeAusEnvironmentVariablen("consumerSecret"));
   }
 
   private String ladeAusEnvironmentVariablen(String envName) {
@@ -30,10 +30,10 @@ public class AuthenticatorTest {
   }
 
   @Test
-  public void simple_Suche_mit_Bearer_token_auth() throws TwitterException {
+  public void simple_Suche_mit_ConsumerKey_und_ConsumerSecret_auth() throws TwitterException {
 
-    List html5 = authenticator.sucheTweets("html5");
+    List<String> tweets = tweetSearchService.searchTweets("html5");
 
-    assertThat(html5).isNotEmpty();
+    assertThat(tweets).isNotEmpty();
   }
 }
