@@ -38,8 +38,8 @@ public class TweetSearchService {
   }
 
   private void useProxy(ConfigurationBuilder builder) {
-//    builder.setHttpProxyHost("localhost");
-//    builder.setHttpProxyPort(3128);
+    builder.setHttpProxyHost("localhost");
+    builder.setHttpProxyPort(3128);
   }
 
   public void setConsumerKey(String consumerKey) {
