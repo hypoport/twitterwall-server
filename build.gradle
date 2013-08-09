@@ -11,8 +11,8 @@ targetCompatibility = 1.7
 project.ext.springVersion = "3.1.2.RELEASE"
 
 repositories {
-    mavenCentral()
     mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
