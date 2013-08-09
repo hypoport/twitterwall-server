@@ -12,9 +12,7 @@ project.ext.springVersion = "3.1.2.RELEASE"
 
 repositories {
     mavenCentral()
-    maven {
-        url System.getProperty("user.home") + "/.m2/repository"
-    }
+    mavenLocal()
 }
 
 dependencies {
