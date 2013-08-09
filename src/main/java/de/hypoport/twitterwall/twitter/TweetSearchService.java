@@ -19,8 +19,7 @@ public class TweetSearchService {
   private static final String consumerSecret = System.getProperty("consumerSecret", System.getenv("consumerSecret"));
   private Twitter twitter;
 
-  public List<Status> searchTweets(String searchText, Optional<String> since, Optional<Long> sinceId) throws TwitterException {
-    Query query = createQuery(searchText, since, sinceId);
+  public QueryResult searchTweets(Query query) throws TwitterException {
     try {
       return doSearch(query);
     } catch (TwitterException e) {
@@ -30,16 +29,8 @@ public class TweetSearchService {
     return doSearch(query);
   }
 
-  private Query createQuery(String searchText, Optional<String> since, Optional<Long> sinceId) {
-    Query query = new Query(searchText);
-    if(since.isPresent()) query.setSince(since.get());
-    if(sinceId.isPresent()) query.setSinceId(sinceId.get());
-    return query;
-  }
-
-  private List<Status> doSearch(Query query) throws TwitterException {
-    QueryResult searchResult = getTwitter().search(query);
-    return searchResult.getTweets();
+  private QueryResult doSearch(Query query) throws TwitterException {
+     return getTwitter().search(query);
   }
 
   private Twitter getTwitter() throws TwitterException {

@@ -3,6 +3,8 @@ package de.hypoport.twitterwall.twitter;
 import com.google.common.base.Optional;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import twitter4j.Query;
+import twitter4j.QueryResult;
 import twitter4j.Status;
 import twitter4j.TwitterException;
 
@@ -34,8 +36,9 @@ public class TweetSearchServiceTest {
   @Test (enabled = false)
   public void simple_Suche_mit_ConsumerKey_und_ConsumerSecret_auth() throws TwitterException {
 
-    List<Status> tweets = tweetSearchService.searchTweets("html5", Optional.<String>absent(), Optional.<Long>absent());
+    QueryResult queryResult = tweetSearchService.searchTweets(new Query("html5"));
 
-    assertThat(tweets).isNotEmpty();
+    assertThat(queryResult).isNotNull();
+    assertThat(queryResult.getTweets()).isNotEmpty();
   }
 }
