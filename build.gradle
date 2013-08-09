@@ -11,10 +11,8 @@ targetCompatibility = 1.7
 project.ext.springVersion = "3.1.2.RELEASE"
 
 repositories {
+    mavenLocal()
     mavenCentral()
-    maven {
-        url System.getProperty("user.home") + "/.m2/repository"
-    }
 }
 
 dependencies {
@@ -39,6 +37,18 @@ dependencies {
 
 test {
     useTestNG()
+}
+
+war {
+    /*
+        Copy static sources from Hypoport's Twitterwall frontend into thw WAR files root folder
+
+        You need to clone https://github.com/hypoport/twitterwall project into
+        twitterwall-server parent folder. Obviously you need to build the frontend project first ;-)
+     */
+    into('/') {
+        from '../twitterwall/dist'
+    }
 }
 
 task listJars << {

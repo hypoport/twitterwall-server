@@ -21,16 +21,6 @@ public class TweetSearchServiceTest {
   @BeforeMethod
   public void setup() {
     tweetSearchService = new TweetSearchService();
-//    tweetSearchService.setConsumerKey(ladeAusEnvironmentVariablen("consumerKey"));
-//    tweetSearchService.setConsumerSecret(ladeAusEnvironmentVariablen("consumerSecret"));
-  }
-
-  private String ladeAusEnvironmentVariablen(String envName) {
-    String value = System.getenv(envName);
-    if (value == null || value.isEmpty()) {
-      throw new IllegalStateException("Das BearerToken muss als env-var '" + envName + "' gesetzt sein!");
-    }
-    return value;
   }
 
   @Test (enabled = false)
