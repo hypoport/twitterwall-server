@@ -29,7 +29,7 @@ public class TweetSearchServiceTest {
     return value;
   }
 
-  @Test
+  @Test (enabled = false)
   public void simple_Suche_mit_ConsumerKey_und_ConsumerSecret_auth() throws TwitterException {
 
     List<String> tweets = tweetSearchService.searchTweets("html5");
