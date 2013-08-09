@@ -1,6 +1,7 @@
 package de.hypoport.twitterwall;
 
 
+import com.google.common.base.Optional;
 import de.hypoport.twitterwall.twitter.TweetSearchService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import twitter4j.TwitterException;
 import javax.inject.Inject;
 import java.util.List;
 
+import static com.google.common.base.Optional.fromNullable;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
@@ -22,8 +24,10 @@ public class TweetSearchController {
   @RequestMapping(value = "/search", method = GET, produces = {"application/json", "text/plain"})
   public
   @ResponseBody
-  List<Status> search(@RequestParam(required = true, value = "q") String query) throws TwitterException {
-    return searchService.searchTweets(query);
+  List<Status> search(@RequestParam(required = true, value = "q") String query,
+                      @RequestParam(required = false, value = "since_id") Long sinceId,
+                      @RequestParam(required = false, value = "since") String since) throws TwitterException {
+    return searchService.searchTweets(query, fromNullable(since), fromNullable(sinceId));
   }
 
   @ExceptionHandler(Exception.class)
