@@ -2,6 +2,7 @@ package de.hypoport.twitterwall.twitter;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import twitter4j.Status;
 import twitter4j.TwitterException;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class TweetSearchServiceTest {
   @Test (enabled = false)
   public void simple_Suche_mit_ConsumerKey_und_ConsumerSecret_auth() throws TwitterException {
 
-    List<String> tweets = tweetSearchService.searchTweets("html5");
+    List<Status> tweets = tweetSearchService.searchTweets("html5");
 
     assertThat(tweets).isNotEmpty();
   }
