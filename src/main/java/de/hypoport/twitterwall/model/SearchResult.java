@@ -1,5 +1,6 @@
 package de.hypoport.twitterwall.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
 import twitter4j.Status;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class SearchResult {
   private String query;
   private List<Tweet> tweets;
 
+  @JsonProperty("since_id")
   public String getSinceId() {
     return sinceId;
   }
@@ -21,6 +23,7 @@ public class SearchResult {
     this.sinceId = sinceId;
   }
 
+  @JsonProperty("max_id")
   public String getMaxId() {
     return maxId;
   }
@@ -37,6 +40,7 @@ public class SearchResult {
     this.count = count;
   }
 
+  @JsonProperty("completed_in")
   public double getCompletedIn() {
     return completedIn;
   }

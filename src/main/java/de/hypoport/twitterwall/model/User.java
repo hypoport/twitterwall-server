@@ -1,5 +1,7 @@
 package de.hypoport.twitterwall.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 public class User {
 
   private long id;
@@ -27,6 +29,7 @@ public class User {
     this.name = name;
   }
 
+  @JsonProperty("screen_name")
   public String getScreenName() {
     return screenName;
   }
@@ -51,6 +54,7 @@ public class User {
     this.description = description;
   }
 
+  @JsonProperty("profile_image_url_https")
   public String getProfileImageUrlHttps() {
     return profileImageUrlHttps;
   }
@@ -67,6 +71,7 @@ public class User {
     this.url = url;
   }
 
+  @JsonProperty("follower_count")
   public int getFollowersCount() {
     return followersCount;
   }

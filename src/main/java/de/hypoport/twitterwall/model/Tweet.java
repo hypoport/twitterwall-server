@@ -1,5 +1,7 @@
 package de.hypoport.twitterwall.model;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 import java.util.Date;
 
 public class Tweet {
@@ -10,6 +12,7 @@ public class Tweet {
   private String source;
   private User user;
 
+  @JsonProperty("created_at")
   public Date getCreatedAt() {
     return createdAt;
   }
