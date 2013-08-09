@@ -2,26 +2,28 @@ package de.hypoport.twitterwall.twitter;
 
 import org.springframework.stereotype.Component;
 import twitter4j.*;
+import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
+import twitter4j.conf.PropertyConfiguration;
 import twitter4j.json.DataObjectFactory;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 @Component
 public class TweetSearchService {
 
-  private static String consumerKey;
-  private static String consumerSecret;
+  private static final String consumerKey = System.getProperty("consumerKey");
+  private static final String consumerSecret = System.getProperty("consumerSecret");
 
   public List<String> searchTweets(String searchQuery) throws TwitterException {
-    ConfigurationBuilder builder = new ConfigurationBuilder();
-    builder.setUseSSL(true);
-    builder.setJSONStoreEnabled(true);
-    useProxy(builder);
-    builder.setApplicationOnlyAuthEnabled(true);
-    Twitter twitter = new TwitterFactory(builder.build()).getInstance();
-    twitter.setOAuthConsumer(consumerKey, consumerSecret);
+    Twitter twitter = new TwitterFactory(configure()).getInstance();
+//    twitter.setOAuthConsumer(consumerKey, consumerSecret);
     twitter.getOAuth2Token();
 
     Query query = new Query(searchQuery);
@@ -29,6 +31,18 @@ public class TweetSearchService {
     List<Status> tweetList = searchResult.getTweets();
 
     return convertToJsonStringList(tweetList);
+  }
+
+  private Configuration configure() {
+    ConfigurationBuilder builder = new ConfigurationBuilder();
+    builder.setUseSSL(true);
+    builder.setJSONStoreEnabled(true);
+    builder.setOAuthConsumerKey(consumerKey);
+    builder.setOAuthConsumerSecret(consumerSecret);
+//    useProxy(builder);
+    builder.setApplicationOnlyAuthEnabled(true);
+
+    return builder.build();
   }
 
   private List<String> convertToJsonStringList(List<Status> tweetList) {
@@ -42,13 +56,5 @@ public class TweetSearchService {
   private void useProxy(ConfigurationBuilder builder) {
     builder.setHttpProxyHost("localhost");
     builder.setHttpProxyPort(3128);
-  }
-
-  public void setConsumerKey(String consumerKey) {
-    this.consumerKey = consumerKey;
-  }
-
-  public void setConsumerSecret(String consumerSecret) {
-    this.consumerSecret = consumerSecret;
   }
 }

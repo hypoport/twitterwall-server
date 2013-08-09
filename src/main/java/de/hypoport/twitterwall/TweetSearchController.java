@@ -20,7 +20,7 @@ public class TweetSearchController {
   @Inject
   TweetSearchService searchService;
 
-  @RequestMapping(value = "/search", method = GET, produces = {"application/json"})
+  @RequestMapping(value = "/search", method = GET, produces = {"application/json", "text/plain"})
   public
   @ResponseBody
   List<String> search(@RequestParam(required = true, value = "q") String query) throws TwitterException {

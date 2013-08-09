@@ -17,8 +17,8 @@ public class TweetSearchServiceTest {
   @BeforeMethod
   public void setup() {
     tweetSearchService = new TweetSearchService();
-    tweetSearchService.setConsumerKey(ladeAusEnvironmentVariablen("consumerKey"));
-    tweetSearchService.setConsumerSecret(ladeAusEnvironmentVariablen("consumerSecret"));
+//    tweetSearchService.setConsumerKey(ladeAusEnvironmentVariablen("consumerKey"));
+//    tweetSearchService.setConsumerSecret(ladeAusEnvironmentVariablen("consumerSecret"));
   }
 
   private String ladeAusEnvironmentVariablen(String envName) {
