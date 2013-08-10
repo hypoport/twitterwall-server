@@ -1,8 +1,6 @@
 package de.hypoport.twitterwall.mapper;
 
-
 import com.google.common.base.Function;
-import com.google.common.collect.Lists;
 import de.hypoport.twitterwall.model.SearchResult;
 import de.hypoport.twitterwall.model.Tweet;
 import org.springframework.stereotype.Component;

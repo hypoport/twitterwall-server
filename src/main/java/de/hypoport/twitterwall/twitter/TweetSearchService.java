@@ -1,12 +1,10 @@
 package de.hypoport.twitterwall.twitter;
 
-import com.google.common.base.Optional;
 import org.springframework.stereotype.Component;
 import twitter4j.*;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,11 +28,11 @@ public class TweetSearchService {
   }
 
   private QueryResult doSearch(Query query) throws TwitterException {
-     return getTwitter().search(query);
+    return getTwitter().search(query);
   }
 
   private Twitter getTwitter() throws TwitterException {
-    if(twitter == null) {
+    if (twitter == null) {
       twitter = new TwitterFactory(configure()).getInstance();
       twitter.getOAuth2Token();
     }

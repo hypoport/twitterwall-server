@@ -1,6 +1,5 @@
 package de.hypoport.twitterwall;
 
-
 import com.google.common.base.Optional;
 import de.hypoport.twitterwall.mapper.ResultMapper;
 import de.hypoport.twitterwall.model.SearchResult;
@@ -38,8 +37,8 @@ public class TweetSearchController {
 
   private Query createQuery(String searchText, Optional<String> since, Optional<Long> sinceId) {
     Query query = new Query(searchText);
-    if(since.isPresent()) query.setSince(since.get());
-    if(sinceId.isPresent()) query.setSinceId(sinceId.get());
+    if (since.isPresent()) query.setSince(since.get());
+    if (sinceId.isPresent()) query.setSinceId(sinceId.get());
     return query;
   }
 

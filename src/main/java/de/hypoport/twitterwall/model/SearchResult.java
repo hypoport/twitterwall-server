@@ -1,7 +1,6 @@
 package de.hypoport.twitterwall.model;
 
 import org.codehaus.jackson.annotate.JsonProperty;
-import twitter4j.Status;
 
 import java.util.List;
 
