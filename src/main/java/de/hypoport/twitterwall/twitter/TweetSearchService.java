@@ -24,7 +24,7 @@ public class TweetSearchService {
       logger.log(Level.SEVERE, e.getMessage());
       twitter = null;
     }
-    return doSearch(query);
+    return null;
   }
 
   private QueryResult doSearch(Query query) throws TwitterException {
@@ -45,7 +45,6 @@ public class TweetSearchService {
     builder.setJSONStoreEnabled(true);
     builder.setOAuthConsumerKey(consumerKey);
     builder.setOAuthConsumerSecret(consumerSecret);
-//    useProxy(builder);
     builder.setApplicationOnlyAuthEnabled(true);
     return builder.build();
   }

@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import twitter4j.Query;
+import twitter4j.QueryResult;
 import twitter4j.TwitterException;
 
 import javax.inject.Inject;
@@ -32,7 +33,9 @@ public class TweetSearchController {
                       @RequestParam(required = false, value = "since_id") Long sinceId) throws TwitterException {
     Query query = createQuery(search, fromNullable(since), fromNullable(sinceId));
 
-    return resultMapper.map(searchService.searchTweets(query));
+    QueryResult queryResult = searchService.searchTweets(query);
+    SearchResult searchResult = resultMapper.map(queryResult);
+    return searchResult;
   }
 
   private Query createQuery(String searchText, Optional<String> since, Optional<Long> sinceId) {
