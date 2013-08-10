@@ -1,0 +1,1 @@
+appConfiguration.searchUrl = 'http://hypoport-twitterwall.appspop.com:8080/search';
