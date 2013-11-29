@@ -47,7 +47,7 @@ public class TweetSearchController {
 
   @ExceptionHandler(Exception.class)
   @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-  String handleException(TwitterException twex) {
-    return twex.getErrorMessage();
+  String handleException(Exception e) {
+    return e.getMessage();
   }
 }
