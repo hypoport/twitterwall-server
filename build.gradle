@@ -5,8 +5,10 @@ apply plugin: 'jetty'
 description = 'Hypoport Twitterwall Server'
 version = '0.1.0-SNAPSHOT'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+compileJava {
+    sourceCompatibility = '1.7'
+    targetCompatibility = '1.7'
+}
 
 project.ext.springVersion = "3.1.2.RELEASE"
 
@@ -16,17 +18,14 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.twitter4j', name: 'twitter4j-core', version: '3.0.4+'
-
-    compile group: 'javax.inject', name: 'javax.inject', version: '1'
-
+    compile 'org.twitter4j:twitter4j-core:3.0.5+'
+    compile 'javax.inject:javax.inject:1'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.+'
+    compile 'com.google.guava:guava:15.0'
     compile "org.springframework:spring-core:$project.ext.springVersion",
             "org.springframework:spring-web:$project.ext.springVersion",
             "org.springframework:spring-webmvc:$project.ext.springVersion",
             "org.springframework:spring-context:$project.ext.springVersion"
-
-    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.+'
-    compile 'com.google.guava:guava:14.0.1'
 
     providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
@@ -49,8 +48,4 @@ war {
     into('/') {
         from '../twitterwall/dist'
     }
-}
-
-task listJars << {
-    configurations.compile.each { File file -> println file.name }
 }
