@@ -10,7 +10,8 @@ compileJava {
     targetCompatibility = '1.7'
 }
 
-project.ext.springVersion = "3.1.2.RELEASE"
+project.ext.springVersion = '3.2.5.RELEASE'
+project.ext.logbackVersion = '1.0.13'
 
 repositories {
     mavenLocal()
@@ -18,9 +19,14 @@ repositories {
 }
 
 dependencies {
+
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile "ch.qos.logback:logback-core:${project.ext.logbackVersion}"
+    compile "ch.qos.logback:logback-classic:${project.ext.logbackVersion}"
+
     compile 'org.twitter4j:twitter4j-core:3.0.5+'
     compile 'javax.inject:javax.inject:1'
-    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.+'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
     compile 'com.google.guava:guava:15.0'
     compile "org.springframework:spring-core:$project.ext.springVersion",
             "org.springframework:spring-web:$project.ext.springVersion",
