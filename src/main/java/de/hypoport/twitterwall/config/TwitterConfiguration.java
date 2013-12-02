@@ -19,7 +19,6 @@ public class TwitterConfiguration {
 
   public boolean isFullyConfigured() {
     boolean fullyConfigured = consumerKey != null && consumerSecret != null && !consumerKey.isEmpty() && !consumerSecret.isEmpty();
-    fullyConfigured = false;
     if (!fullyConfigured) {
       logger.warn("No configuration for Twitter found.\n" +
           "The search service is disabled and will only return mock data!\n" +
