@@ -1,19 +1,19 @@
 package de.hypoport.twitterwall.twitter;
 
 import de.hypoport.twitterwall.config.TwitterConfiguration;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import twitter4j.*;
 import twitter4j.conf.Configuration;
 import twitter4j.conf.ConfigurationBuilder;
 
 import javax.inject.Inject;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Component
 class TwitterService {
 
-  static Logger logger = LoggerFactory.getLogger(TwitterService.class);
+  static Logger logger = Logger.getLogger(TwitterService.class.getCanonicalName());
 
   @Inject
   TwitterConfiguration configuration;
@@ -24,7 +24,7 @@ class TwitterService {
     try {
       return doSearch(query);
     } catch (TwitterException e) {
-      logger.error("Error while searching on Twitter.",e);
+      logger.log(Level.SEVERE, "Error while searching on Twitter.", e);
       twitter = null;
     }
     return null;
