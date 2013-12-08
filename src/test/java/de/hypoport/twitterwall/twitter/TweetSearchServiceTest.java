@@ -1,12 +1,13 @@
 package de.hypoport.twitterwall.twitter;
 
 import de.hypoport.twitterwall.config.TwitterConfiguration;
-import org.slf4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import twitter4j.Query;
 import twitter4j.QueryResult;
 import twitter4j.TwitterException;
+
+import java.util.logging.Logger;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
