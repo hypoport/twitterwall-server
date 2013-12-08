@@ -1,13 +1,14 @@
 package de.hypoport.twitterwall.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Component
 public class TwitterConfiguration {
 
-  static Logger logger = LoggerFactory.getLogger(TwitterConfiguration.class);
+  static Logger logger = Logger.getLogger(TwitterConfiguration.class.getCanonicalName());
 
   private String consumerKey;
   private String consumerSecret;
@@ -20,7 +21,7 @@ public class TwitterConfiguration {
   public boolean isFullyConfigured() {
     boolean fullyConfigured = consumerKey != null && consumerSecret != null && !consumerKey.isEmpty() && !consumerSecret.isEmpty();
     if (!fullyConfigured) {
-      logger.warn("No configuration for Twitter found.\n" +
+      logger.log(Level.WARNING, "No configuration for Twitter found.\n" +
           "The search service is disabled and will only return mock data!\n" +
           "Please provide 'consumerKey' and 'consumerSecret' variables as environment variable OR as system property.");
     } else {
