@@ -12,6 +12,7 @@ import twitter4j.QueryResult;
 import twitter4j.TwitterException;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletResponse;
 
 import static com.google.common.base.Optional.fromNullable;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -26,11 +27,10 @@ public class TweetSearchController {
   ResultMapper resultMapper;
 
   @RequestMapping(value = "/search", method = GET, produces = {"application/json", "text/plain"})
-  public
   @ResponseBody
-  SearchResult search(@RequestParam(required = true, value = "q") String search,
-                      @RequestParam(required = false, value = "since") String since,
-                      @RequestParam(required = false, value = "since_id") Long sinceId) throws TwitterException {
+  public SearchResult search(@RequestParam(required = true, value = "q") String search,
+                             @RequestParam(required = false, value = "since") String since,
+                             @RequestParam(required = false, value = "since_id") Long sinceId) throws TwitterException {
     Query query = createQuery(search, fromNullable(since), fromNullable(sinceId));
 
     QueryResult queryResult = searchService.searchTweets(query);
