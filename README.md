@@ -1,6 +1,20 @@
 # Twitterwall-Server
 
- Work in progress ...
+## Development
+
+### Requirements
+
+* Java JDK 1.7 (or newer)
+* Gradle 1.9 (or newer)
+
+### Building
+
+````$> gradle war````
+
+### Run development server
+
+````$> gradle jettyRunWar````
+
 
 ## Continuous Integration
 
