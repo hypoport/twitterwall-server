@@ -18,6 +18,12 @@ repositories {
     mavenCentral()
 }
 
+jettyRunWar {
+    // default settings, so that Twitterwall (frontend) developement reverse proxy tool works
+    contextPath = ''
+    httpPort = 8000
+}
+
 dependencies {
 
     compile 'org.twitter4j:twitter4j-core:3.0.5+'
