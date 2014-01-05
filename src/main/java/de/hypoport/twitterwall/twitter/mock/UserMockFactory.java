@@ -152,6 +152,16 @@ class UserMockFactory {
             1567
         ),
         new UserMock(
+            170625432L,
+            "Ninjin Juice 2",
+            "NinjinJuice2",
+            "China",
+            "I'm a ninja",
+            "https://pbs.twimg.com/profile_images/378800000550212937/20870ba9ec36289566bce57f128f1bd5_normal.jpeg",
+            null,
+            156
+        ),
+        new UserMock(
             16583513L,
             "Nancy Spigos",
             "NancySpigos",

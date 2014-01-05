@@ -52,6 +52,10 @@ class StatusMockFactory {
             "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>"
         ),
         new StatusMock(
+            "◎ニュース速報+＠２ｃｈ◎ 【社会】 「名前を亞堕夢（アダム）にして」「優万旗（やんた）にしろ」 ”キラキラネーム”を推してくる友人や親戚に苦悩する人々 http://t.co/AW2siGokW4",
+            "web"
+        ),
+        new StatusMock(
             "Rinna und Kyra meinen beide, in der Hölle sei es warm. Okey. #CooleSache #Blub #MeinBruderMeintIchMachZuWenigHashtags",
             "web"
         ),
