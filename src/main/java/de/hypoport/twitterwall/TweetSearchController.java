@@ -12,7 +12,6 @@ import twitter4j.QueryResult;
 import twitter4j.TwitterException;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpServletResponse;
 
 import static com.google.common.base.Optional.fromNullable;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
@@ -26,7 +25,7 @@ public class TweetSearchController {
   @Inject
   ResultMapper resultMapper;
 
-  @RequestMapping(value = "/search", method = GET, produces = {"application/json", "text/plain"})
+  @RequestMapping(value = "/search", method = GET, produces = "application/json;charset=utf-8")
   @ResponseBody
   public SearchResult search(@RequestParam(required = true, value = "q") String search,
                              @RequestParam(required = false, value = "since") String since,

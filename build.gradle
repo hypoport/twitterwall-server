@@ -10,6 +10,8 @@ compileJava {
     targetCompatibility = '1.7'
 }
 
+[compileJava, compileTestJava]*.options.collect {options -> options.encoding = 'UTF-8'}
+
 project.ext.springVersion = '3.2.5.RELEASE'
 project.ext.logbackVersion = '1.0.13'
 
