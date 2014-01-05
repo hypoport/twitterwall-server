@@ -17,7 +17,7 @@ class UserMockFactory {
             "Rianneeh",
             "Nederland",
             "Never say goodbye, because goodbye means going away, and going away means forgetting (Houdt van ananassen )\n▬▬▬▬▬▬▬▬▬▬▬▬♦♦♦▬▬▬▬▬▬▬▬▬▬▬▬",
-            "https://si0.twimg.com/profile_images/378800000225187691/e7093b5f7628eb76d472dfa93dccb788_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/413443300683563008/kMNYtixB_bigger.jpeg",
             "http://t.co/R0I1MqY0Uw",
             201
         ),
@@ -27,7 +27,7 @@ class UserMockFactory {
             "RoomSuusjex",
             "In jouwn broek .",
             ".@xDanielleOfzo_ @WiepBerendsen and @Proudreiniacx zijn mijn CutieDinnetjes. Proudsmainiac of the world. Appelsap omdat het kan xo FRIENDSAndFAMILIEBovenAlles.",
-            "https://si0.twimg.com/profile_images/378800000111038653/291ba15d149194e03afd2e27b97ad68c_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/419426915129503744/zj7gCLi4_bigger.jpeg",
             null,
             92
         ),
@@ -37,7 +37,7 @@ class UserMockFactory {
             "Mrs__Reedus",
             "zombieland",
             "@wwwbigbaldhead ∞ ! ‹3",
-            "https://si0.twimg.com/profile_images/378800000246598616/a0a80d434df3b3d308f143db28b97df8_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/378800000246598616/a0a80d434df3b3d308f143db28b97df8_normal.jpeg",
             "http://t.co/MwRvPfoAA4",
             111
         ),
@@ -47,7 +47,7 @@ class UserMockFactory {
             "ProudMertinator",
             "Mert & Alessandro volgen me ♥",
             "1 guy who has changed my life @Realiteittijd he mean so mutch to me he always get a smile on my face and he inspired me he is always there for me .",
-            "https://si0.twimg.com/profile_images/73212497/twitterpic_normal.JPG",
+            "https://pbs.twimg.com/profile_images/73212497/twitterpic_normal.JPG",
             "http://t.co/KdPTV58XdF",
             531
         ),
@@ -57,7 +57,7 @@ class UserMockFactory {
             "brookeherberto",
             "",
             "Nebraska Cheer Center | Platinum S4\nProverbs 3:5 ∞",
-            "https://si0.twimg.com/profile_images/378800000261805304/1523027b494715c99e73b26427cd0c66_normal.png",
+            "https://pbs.twimg.com/profile_images/378800000261805304/1523027b494715c99e73b26427cd0c66_normal.png",
             null,
             469
         ),
@@ -67,7 +67,7 @@ class UserMockFactory {
             "LordShaffer",
             "",
             "Logic will take you from A to B but imagination will take you every where. imagining my self in Estadio Santiago Bernabéu, on my whites",
-            "https://si0.twimg.com/profile_images/378800000216539925/3ca41d922a516e58a09b876f2cccc82a_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/378800000216539925/3ca41d922a516e58a09b876f2cccc82a_normal.jpeg",
             null,
             40
         ),
@@ -77,17 +77,17 @@ class UserMockFactory {
             "AnderSchurller",
             "Chulsee FC",
             "Tup cless LM at Chulsee FC. Yung upcumin ster. | Not affiliated with Andre Schurrle | Original Toon |",
-            "https://si0.twimg.com/profile_images/378800000266411464/b015e115fc54955f7ea5174157d92566_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/378800000534440648/80e1b0a4a5e78931e83c00bb4b6b4d09_bigger.jpeg",
             null,
             795
         ),
         new UserMock(
             762676536L,
             "•toniann•",
-            "Hashtagtani",
+            "sdf",
             "lohanthony tweeted me 7-4-13",
             "•that kid on xfactor played in my basement•",
-            "https://si0.twimg.com/profile_images/378800000228981908/41956cfb86d374f0c960168bdc00deda_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/2166444899/asshat_donky_bigger.png",
             "http://t.co/FlBRT51wky",
             705
         ),
@@ -97,17 +97,17 @@ class UserMockFactory {
             "AgentTeee",
             "In another castle",
             "German - 19 - Videogames - @planetjedward - @Pink - @LadyGaga I (un-)follow back :)",
-            "https://si0.twimg.com/profile_images/378800000120912773/ca37defb6d898eb668f4c1cab3e27a11_normal.png",
+            "https://pbs.twimg.com/profile_images/378800000120912773/ca37defb6d898eb668f4c1cab3e27a11_normal.png",
             null,
             949
         ),
         new UserMock(
             602654955L,
-            "xQuiintyRoxanneAD'",
-            "iiQuiinty_x",
+            "Quinty",
+            "quiinty",
             "",
             "instaa ; @quiintyad - Ariana Grande '★ - ilovedance!'☆",
-            "https://si0.twimg.com/profile_images/3700313968/502406fa12bdcb3b0b9b63af60a5a72c_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/1662510902/6457_justic99075_1__bigger.jpg",
             null,
             105
         ),
@@ -117,7 +117,7 @@ class UserMockFactory {
             "JustCyba",
             "Doesn't matter ~",
             "l| Floid | Frodo | Rick | Steve | Sui |l  \r\n~ Sei du selbst die Veränderung , die du dir wünschst für diese Welt ~",
-            "https://si0.twimg.com/profile_images/364466579/RuthiePicture_normal.jpg",
+            "https://pbs.twimg.com/profile_images/364466579/RuthiePicture_normal.jpg",
             null,
             82
         ),
@@ -127,7 +127,7 @@ class UserMockFactory {
             "Its_Blub",
             "",
             "they call me blub",
-            "https://si0.twimg.com/profile_images/3565794736/7f390db4dddd0a26f0cf71100dabe83f_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/3565794736/7f390db4dddd0a26f0cf71100dabe83f_normal.jpeg",
             null,
             342
         ),
@@ -137,7 +137,7 @@ class UserMockFactory {
             "Chloe__Eva",
             "Bath, England",
             "",
-            "https://si0.twimg.com/profile_images/378800000193408350/21c2eb92a4e1d6aa4a615f2472ad1f31_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/378800000547276338/81e30d390b9d8af2061cc8a629e40804_bigger.jpeg",
             null,
             113
         ),
@@ -147,7 +147,7 @@ class UserMockFactory {
             "gail_brand",
             "London/Kent",
             "Trombone player. Composer. Improvised Music/Jazz. On the wireless sometimes. Kvetcher. Noisy. http://t.co/XJJCZOYjEh",
-            "https://si0.twimg.com/profile_images/3779355669/434b36fd9990fa139261a07d701ddf10_normal.jpeg",
+            "https://pbs.twimg.com/profile_images/378800000690450329/58dbbe1cf4b40a5d33b2bc2583363280_bigger.jpeg",
             "http://t.co/W0KjRPkxYL",
             1567
         ),
@@ -157,7 +157,7 @@ class UserMockFactory {
             "NancySpigos",
             "London, Canada",
             "A single mom of three angels *sighs happily* A romance writer *rubs stiff neck* A coffee drinker *smiles* A reader *smile widens*",
-            "https://si0.twimg.com/profile_images/2036336637/21181060716963950_wDEUmwdJ_c_normal.jpg",
+            "https://pbs.twimg.com/profile_images/2036336637/21181060716963950_wDEUmwdJ_c_normal.jpg",
             null,
             532
         )
