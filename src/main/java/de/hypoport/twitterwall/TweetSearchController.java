@@ -30,18 +30,10 @@ public class TweetSearchController {
   public SearchResult search(@RequestParam(required = true, value = "q") String search,
                              @RequestParam(required = false, value = "since") String since,
                              @RequestParam(required = false, value = "since_id") Long sinceId) throws TwitterException {
-    Query query = createQuery(search, fromNullable(since), fromNullable(sinceId));
 
-    QueryResult queryResult = searchService.searchTweets(query);
+    QueryResult queryResult = searchService.searchTweets(search, since, sinceId);
     SearchResult searchResult = resultMapper.map(queryResult);
     return searchResult;
-  }
-
-  private Query createQuery(String searchText, Optional<String> since, Optional<Long> sinceId) {
-    Query query = new Query(searchText);
-    if (since.isPresent()) query.setSince(since.get());
-    if (sinceId.isPresent()) query.setSinceId(sinceId.get());
-    return query;
   }
 
   @ExceptionHandler(Exception.class)

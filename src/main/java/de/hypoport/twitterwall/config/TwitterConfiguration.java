@@ -10,12 +10,14 @@ public class TwitterConfiguration {
 
   static Logger logger = Logger.getLogger(TwitterConfiguration.class.getCanonicalName());
 
+  private String[] defaultUsersForSearch;
   private String consumerKey;
   private String consumerSecret;
 
   public TwitterConfiguration() {
     this.consumerKey = System.getProperty("consumerKey", System.getenv("consumerKey"));
     this.consumerSecret = System.getProperty("consumerSecret", System.getenv("consumerSecret"));
+    this.defaultUsersForSearch = new String[]{};
   }
 
   public boolean isFullyConfigured() {
@@ -36,5 +38,9 @@ public class TwitterConfiguration {
 
   public String getConsumerSecret() {
     return consumerSecret;
+  }
+
+  public String[] getDefaultUsersForSearchQuery() {
+    return defaultUsersForSearch;
   }
 }
