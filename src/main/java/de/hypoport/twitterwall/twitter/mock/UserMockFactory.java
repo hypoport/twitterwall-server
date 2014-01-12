@@ -27,7 +27,7 @@ class UserMockFactory {
             "RoomSuusjex",
             "In jouwn broek .",
             ".@xDanielleOfzo_ @WiepBerendsen and @Proudreiniacx zijn mijn CutieDinnetjes. Proudsmainiac of the world. Appelsap omdat het kan xo FRIENDSAndFAMILIEBovenAlles.",
-            "https://pbs.twimg.com/profile_images/419426915129503744/zj7gCLi4_bigger.jpeg",
+            "https://pbs.twimg.com/profile_images/286967217/n518176610_2182_bigger.jpg",
             null,
             92
         ),
