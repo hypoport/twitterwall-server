@@ -12,7 +12,7 @@ class StatusMockFactory {
   static {
     status = asList(
         new StatusMock(
-            "blub invasie",
+            "blub invasive",
             "web"
         ),
         new StatusMock(
