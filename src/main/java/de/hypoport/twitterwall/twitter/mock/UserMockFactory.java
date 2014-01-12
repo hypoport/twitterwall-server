@@ -17,7 +17,7 @@ class UserMockFactory {
             "Rianneeh",
             "Nederland",
             "Never say goodbye, because goodbye means going away, and going away means forgetting (Houdt van ananassen )\n▬▬▬▬▬▬▬▬▬▬▬▬♦♦♦▬▬▬▬▬▬▬▬▬▬▬▬",
-            "https://pbs.twimg.com/profile_images/413443300683563008/kMNYtixB_bigger.jpeg",
+            "https://pbs.twimg.com/profile_images/420647060736843776/dvPvQV71_normal.jpeg",
             "http://t.co/R0I1MqY0Uw",
             201
         ),
