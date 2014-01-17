@@ -2,9 +2,10 @@ package de.hypoport.twitterwall.twitter;
 
 import de.hypoport.twitterwall.config.TwitterConfiguration;
 import org.springframework.stereotype.Component;
-import twitter4j.Query;
-import twitter4j.QueryResult;
-import twitter4j.TwitterException;
+import twitter4j.*;
+import twitter4j.auth.AccessToken;
+import twitter4j.conf.Configuration;
+import twitter4j.conf.ConfigurationBuilder;
 
 import javax.inject.Inject;
 import java.util.logging.Level;
@@ -17,13 +18,12 @@ public class TweetSearchServiceImpl implements TweetSearchService {
 
   @Inject
   TwitterConfiguration twitterConfiguration;
-  @Inject
-  TwitterService twitterService;
+
   @Inject
   TwitterMock twitterMock;
 
   @Override
-  public QueryResult searchTweets(String queryString, String since, Long sinceId) throws TwitterException {
+  public QueryResult searchTweets(AccessToken accessToken, String queryString, String since, Long sinceId) throws TwitterException {
 
     logger.log(Level.FINE, "RAW SEARCH QUERY = '" + queryString + "'");
 
@@ -33,8 +33,11 @@ public class TweetSearchServiceImpl implements TweetSearchService {
     Query query = queryEnricher.toQuery();
     logger.info("SEARCH QUERY = '" + query.getQuery() + "'");
 
-    if (twitterConfiguration.isFullyConfigured()) {
-      return twitterService.searchTweets(query);
+    if (accessToken != null && twitterConfiguration.isFullyConfigured()) {
+      Twitter twitter = new TwitterFactory(twitterConfiguration.configure()).getInstance(accessToken);
+      return twitter.search(query);
+    } else {
+      logger.info("No ACCESS_TOKEN found, will return Mock data now ;-)");
     }
     return twitterMock.searchTweets(query);
   }

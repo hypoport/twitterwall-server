@@ -4,6 +4,7 @@ import com.google.common.base.Function;
 import de.hypoport.twitterwall.model.SearchResult;
 import de.hypoport.twitterwall.model.Tweet;
 import org.springframework.stereotype.Component;
+import twitter4j.AccountSettings;
 import twitter4j.QueryResult;
 import twitter4j.Status;
 import twitter4j.User;
@@ -42,7 +43,7 @@ public class ResultMapper {
     });
   }
 
-  private de.hypoport.twitterwall.model.User map(User twitterUser) {
+  public de.hypoport.twitterwall.model.User map(User twitterUser) {
     de.hypoport.twitterwall.model.User user = new de.hypoport.twitterwall.model.User();
     user.setDescription(twitterUser.getDescription());
     user.setFollowersCount(twitterUser.getFollowersCount());
@@ -54,4 +55,5 @@ public class ResultMapper {
     user.setUrl(twitterUser.getURL());
     return user;
   }
+
 }

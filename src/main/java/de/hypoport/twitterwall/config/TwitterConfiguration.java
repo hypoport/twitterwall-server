@@ -1,6 +1,8 @@
 package de.hypoport.twitterwall.config;
 
 import org.springframework.stereotype.Component;
+import twitter4j.conf.Configuration;
+import twitter4j.conf.ConfigurationBuilder;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,8 +17,8 @@ public class TwitterConfiguration {
   private String consumerSecret;
 
   public TwitterConfiguration() {
-    this.consumerKey = System.getProperty("consumerKey", System.getenv("consumerKey"));
-    this.consumerSecret = System.getProperty("consumerSecret", System.getenv("consumerSecret"));
+    this.consumerKey = System.getProperty("twitter4j.oauth.consumerKey", System.getenv("twitter4j.oauth.consumerKey"));
+    this.consumerSecret = System.getProperty("twitter4j.oauth.consumerSecret", System.getenv("twitter4j.oauth.consumerSecret"));
     this.defaultUsersForSearch = new String[]{};
   }
 
@@ -32,12 +34,11 @@ public class TwitterConfiguration {
     return fullyConfigured;
   }
 
-  public String getConsumerKey() {
-    return consumerKey;
-  }
-
-  public String getConsumerSecret() {
-    return consumerSecret;
+  public Configuration configure() {
+    ConfigurationBuilder builder = new ConfigurationBuilder();
+    builder.setUseSSL(true);
+    builder.setJSONStoreEnabled(true);
+    return builder.build();
   }
 
   public String[] getDefaultUsersForSearchQuery() {
