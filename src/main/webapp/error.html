@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <style type="text/css">
+    #error {
+      width: 100%;
+      border: 1px silver dotted;
+    }
+  </style>
+</head>
+<body>
+
+<label>
+  <pre id="error">
+
+  </pre>
+</label>
+
+<script type="text/javascript">
+  (function () {
+    'use strict';
+    var e = document.getElementById("error");
+    var msg = decodeURIComponent((window.location.hash + '').replace(/\+/g, '%20'));
+    e.appendChild(document.createTextNode(msg));
+  })();
+</script>
+
+</body>
+</html>
