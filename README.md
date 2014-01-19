@@ -17,6 +17,17 @@ $> export twitter4j.oauth.consumerSecret=aabbccddeeffaabbccddee11aabbccddeeddff2
 $> gradle war jettyRunWar
 ```
 
+You can grab these credentials for your own from Twitter's dev site https://dev.twitter.com.
+Create a new Twitter application there and follow these steps:
+
+1. Name -> provide a simple name
+2. Description -> obvious ;-)
+3. Website -> put in some valid site there (can also be a blog or something)
+4. Application Type -> Read only
+5. Callback URL -> http://example.com  (important: don't leave this field empty! The callback URL actually used is overwritten at runtime)
+6. Allow this application to be used to Sign in with Twitter -> Check
+7. done.
+
 ## Development
 
 ### Requirements
