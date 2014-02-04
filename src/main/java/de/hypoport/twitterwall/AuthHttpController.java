@@ -24,9 +24,6 @@ public class AuthHttpController {
   public static final String DO_TWITTER_SIGN_IN = "/doTwitterSignIn";
   public static final String DO_TWITTER_CALLBACK = "/doTwitterCallback";
 
-  @Inject
-  TwitterConfiguration configuration;
-
   @RequestMapping(value = DO_TWITTER_SIGN_IN, method = GET)
   @ResponseBody
   public RedirectView doTwitterSignIn(HttpServletRequest request) throws TwitterException {
